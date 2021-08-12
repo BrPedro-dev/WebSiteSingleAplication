@@ -1,0 +1,65 @@
+body{
+    background-color: #BB2020 !important;
+}
+
+#box{
+    max-width: 1280px ;
+    margin: 10% auto;
+    position: relative;
+    background: rgb( 255,235,77) ;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.8);
+    color: #06111C
+}
+
+.imagens{
+    width: 225px;
+    height: 317px;
+    border: 10px solid #BB2020;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.9);
+}
+h1{
+    text-align: center;
+    margin: 1% !important;
+}
+#btn{
+    border: 3px solid #030000; 
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.8);
+}
+
+#input{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#titles{
+    margin-top: 1%;
+    padding: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.title{
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 8%;
+    padding:2%;
+    max-width: 200px;
+    margin-left: 5.5%;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.8);
+}
+
+#span-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Name{
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.8);
+}
+
