@@ -1,6 +1,6 @@
 
 // manipulation of the DOM, event listeners, creating new elements, etc....
-define(function(){
+define(['../controllers/element-controller','../controllers/film-controller'],function (elementController,filmController){
 
 	
 	var externals = {};
@@ -9,7 +9,7 @@ define(function(){
 	function show(filmsList) {
 
 		var html =`<div class='row justify-content-md-center'>
-		<h1>Anime of Naruto</h1>
+		<h1>Anime</h1>
 		<div id="input" class="input-group d-flex justify-content-center">
 			<input type="text" id="Name" class="form-control" placeholder="Name Of Anime" aria-label="Name Of Anime" aria-describedby="basic-addon1">
 			<button class=" btn btn-danger" id="btn">Search Anime</button>
@@ -20,23 +20,40 @@ define(function(){
 
 	filmsList.results.forEach((element) => {
 		html += "<span class='span-flex'>"
-			html += "<img class='imagens' src = '" + element.image_url + "'/>";
+			html += "<img id= '" + element.mal_id + "' class='imagens' src = '" + element.image_url + "'/>";
 			html += "<p class='title'>" + element.title +"</p>"
 		html += "</span>"
 	});
 
 
 	html += "";
-	
 		$("#app").html(html);
+
+		element()
+		btn()
 	}
 
-	
+	function btn(){
+        $("#btn").click(function () {
+            window.location.hash = "film-list"
+            filmController.setName($("#Name").val())
+        })
+    }
+
+
+    function element(){
+        $("img").click(function (event) {
+            window.location.hash = "element"
+            elementController.setId(event.target.id);
+        })
+    }
+
+
 	
 	externals.show = show;
-	
-	
+
 	return externals;
 
 
 })
+

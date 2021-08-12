@@ -17,6 +17,7 @@ body{
     border: 10px solid #BB2020;
     border-radius: 25px;
     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.9);
+    cursor: pointer;
 }
 h1{
     text-align: center;
@@ -63,3 +64,24 @@ h1{
     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.8);
 }
 
+#synopsis{
+    display: inline-block;
+    margin-left: 5%;
+    text-align: center;
+    color: #ffffff;
+    background-color: black;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.8);
+    margin-bottom: 4%;
+    padding: 2%;
+}
+
+.span-flex2{
+    display: flex;
+    align-items: center ;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.noclick{
+    cursor: default;
+}

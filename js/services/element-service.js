@@ -5,7 +5,6 @@ define(function () {
 
 
 	function getAnime(id) {
-		console.log(id)
 		return fetch(api+id).then(function (response) {
 			return response.json();
 		}).then(function (json) {

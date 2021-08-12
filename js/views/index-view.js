@@ -1,4 +1,4 @@
-define(function () {
+define(['../controllers/element-controller','../controllers/film-controller'],function (elementController,filmController) {
 
 
     var externals = {};
@@ -38,6 +38,7 @@ define(function () {
     function btn(){
         $("#btn").click(function () {
             window.location.hash = "film-list"
+            filmController.setName($("#Name").val())
         })
     }
 
@@ -45,22 +46,14 @@ define(function () {
     function element(){
         $("img").click(function (event) {
             window.location.hash = "element"
-            id = event.target.id;
+            elementController.setId(event.target.id);
         })
     }
 
-    function getNameAnime(){
-        return $("#Name").val();
-    }
-
-    function getAnimeId(){
-        return id;
-    }
 
 
     externals.show = show;
-    externals.getNameAnime = getNameAnime;
-    externals.getAnimeId = getAnimeId;
+   
 
     return externals;
 
