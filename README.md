@@ -1,5 +1,6 @@
 # WebSiteSingleAplication
-[![NPM](https://github.com/BrPedro-dev/WebSiteSingleAplication/blob/master/LICENSE) 
+
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/BrPedro-dev/WebSiteSingleAplication/blob/master/LICENSE) 
 
 # About the project
 
