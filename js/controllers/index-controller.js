@@ -8,11 +8,11 @@ define(['../services/index-service', '../views/index-view'], function (animeServ
 		animeService.getAnimes().then(function (data) {
 			animeView.show(data);
 		})
+
 	}
 
 	externals.init = init;
-	externals.getAnimes = animeView.getNameAnime;
-	externals.getAnimeId = animeView.getAnimeId;
+	externals.setApi = animeService.setApi;
 	return externals;
 
 })

@@ -4,12 +4,7 @@ define(function(){
 
 	var routes = {
 
-		films: {
-			hash: "#film-list",
-			controller: "film-controller"
-		},
-
-		index:{
+		index1:{
 			hash: "",
 			controller: "index-controller"
 		},

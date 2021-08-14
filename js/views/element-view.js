@@ -1,6 +1,6 @@
 
 // manipulation of the DOM, event listeners, creating new elements, etc....
-define(['../controllers/film-controller'],function (filmController){
+define(function (){
 
 	
 	var externals = {};
@@ -10,7 +10,7 @@ define(['../controllers/film-controller'],function (filmController){
 
 
 		var html =`<div class='row justify-content-md-center'>
-		<h1>Anime</h1>
+		<h1 id=center >Anime</h1>
 		<div id="input" class="input-group d-flex justify-content-center">
 			<input type="text" id="Name" class="form-control" placeholder="Name Of Anime" aria-label="Name Of Anime" aria-describedby="basic-addon1">
 			<button class=" btn btn-danger" id="btn">Search Anime</button>
@@ -37,8 +37,17 @@ define(['../controllers/film-controller'],function (filmController){
 
 	function btn(){
         $("#btn").click(function () {
-            window.location.hash = "film-list"
-            filmController.setName($("#Name").val())
+
+			if($("#Name").val() !== ""){
+
+				require(['controllers/index-controller'], function(index){
+
+					var api = "https://api.jikan.moe/v3/search/anime?q=" + $("#Name").val();
+                	window.location.hash = ""
+                	index.setApi(api)
+
+				})
+            }
         })
     }
 
