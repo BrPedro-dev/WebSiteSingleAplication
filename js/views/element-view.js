@@ -15,13 +15,11 @@ define(function (){
 			<input type="text" id="Name" class="form-control" placeholder="Name Of Anime" aria-label="Name Of Anime" aria-describedby="basic-addon1">
 			<button class=" btn btn-danger" id="btn">Search Anime</button>
 		</div>
-	</div>
-
-	<div id="titles">`;
+	</div>`;
 
 	
 		html += "<span class='span-flex2'>"
-			html += "<div>"
+			html += "<div class='imagens_element'>"
 			html += "<img class='imagens noclick' src = '" + filmsList.image_url + "'/>";
 			html += "<p class='title'>" + filmsList.title +"</p>"
 			html += "</div>"
